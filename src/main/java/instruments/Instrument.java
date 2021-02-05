@@ -2,7 +2,7 @@ package instruments;
 
 import behaviours.IPlay;
 
-public class Instrument implements IPlay {
+public abstract class Instrument implements IPlay {
 
     private String colour;
     private int costPrice;
@@ -14,8 +14,15 @@ public class Instrument implements IPlay {
         this.salePrice = salePrice;
     }
 
-    @Override
-    public String play() {
-        return null;
+    public String getColour() {
+        return this.colour;
+    }
+
+    public int getCostPrice() {
+        return this.costPrice;
+    }
+
+    public int getSalePrice() {
+        return this.salePrice;
     }
 }
