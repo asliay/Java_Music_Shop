@@ -1,6 +1,7 @@
 import behaviours.ISell;
 import instruments.Guitar;
 import instruments.GuitarType;
+import instruments.NumPianoKeys;
 import instruments.Piano;
 import org.junit.Before;
 import org.junit.Test;
@@ -17,7 +18,7 @@ public class ShopTest {
     @Before
     public void setUp() {
         guitar = new Guitar("Red", 400, 600, 6, GuitarType.ACOUSTIC);
-        piano = new Piano("Black", 800, 1100);
+        piano = new Piano("Black", 800, 1100, NumPianoKeys.EIGHTYEIGHT, "Yamaha");
         shop = new Shop("Ray's Music Exchange", 1000);
     }
 

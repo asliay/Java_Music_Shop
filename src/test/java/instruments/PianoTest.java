@@ -12,7 +12,7 @@ public class PianoTest {
 
     @Before
     public void setUp() {
-        piano = new Piano("Black", 800, 1000);
+        piano = new Piano("Black", 800, 1000, NumPianoKeys.SEVENTYTWO, "Yamaha");
     }
 
     @Test
@@ -22,12 +22,23 @@ public class PianoTest {
 
     @Test
     public void hasCostPrice() {
-        assertEquals(800, piano.getCostPrice());
+        assertEquals(800, piano.getCostPrice(), 0.0);
     }
 
     @Test
     public void hasSalePrice() {
-        assertEquals(1000, piano.getSalePrice());
+        assertEquals(1000, piano.getSalePrice(), 0.0);
+    }
+
+    @Test
+    public void hasNumKeys() {
+        NumPianoKeys numKeysEnum = piano.getNumKeys();
+        assertEquals(72, numKeysEnum.getValue());
+    }
+
+    @Test
+    public void hasBrand() {
+        assertEquals("Yamaha", piano.getBrand());
     }
 
     @Test
