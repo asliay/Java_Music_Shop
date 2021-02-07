@@ -39,8 +39,6 @@ public abstract class stockItem implements ISell {
     }
 
     public double calculateMarkup() {
-        double num1 = this.salePrice - this.costPrice;
-        double num2 = num1 / this.costPrice;
-        return num2 * 100;
+        return (this.salePrice - this.costPrice);
     }
 }
