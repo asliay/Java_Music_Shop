@@ -6,7 +6,6 @@ public class Piano extends Instrument{
         super(colour, costPrice, salePrice);
     }
 
-
     @Override
     public String play() {
         return "Plink Plonk";
