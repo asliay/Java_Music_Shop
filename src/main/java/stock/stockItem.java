@@ -18,16 +18,8 @@ public abstract class stockItem implements ISell {
         return this.type;
     }
 
-    public void setType(String type) {
-        this.type = type;
-    }
-
     public double getCostPrice() {
         return this.costPrice;
-    }
-
-    public void setCostPrice(double costPrice) {
-        this.costPrice = costPrice;
     }
 
     public double getSalePrice() {
